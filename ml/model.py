@@ -61,8 +61,9 @@ def inference(model, X):
     preds : np.array
         Predictions from the model.
     """
-    # TODO: implement the function
-    pass
+    predicts = model.predict(X)
+    return predicts
+    
 
 def save_model(model, path):
     """ Serializes model to a file.
@@ -74,8 +75,12 @@ def save_model(model, path):
     path : str
         Path to save pickle file.
     """
-    # TODO: implement the function
-    pass
+    try: 
+        with open(path, 'wb') as file: 
+            pickle.dump(model, file)
+    except Exception as e:
+        print(f"Error while saving: {e}")
+    
 
 def load_model(path):
     """ Loads pickle file from `path` and returns it."""
