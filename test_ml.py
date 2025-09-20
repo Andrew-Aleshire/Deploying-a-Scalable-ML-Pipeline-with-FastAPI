@@ -38,7 +38,7 @@ def test_inference():
 
 # implement the third test. Change the function name and input as needed
 def test_compute_model_metrics_values():
-     """
+    """
     Test compute metrics returns correct precision, recall and f1 values
     """
     y_true = np.array([1, 0, 1, 1])
